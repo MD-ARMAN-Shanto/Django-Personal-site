@@ -1,0 +1,54 @@
+{% extends 'armansite/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container" style="margin-top: 100px">
+        <div class="card-deck">
+            <div class="card">
+                <img src="{% static 'armansite/images/heartbeat.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body"><br>
+                    <h5 class="card-title">HeartBeat Monitor</h5>
+                    <p class="card-text">Thru this device we can monitor anyone heart
+                        beat at any time by the help of heart beat sensor</p><br>
+                    <p class="card-text">
+                        <small class="text-muted"><b>Internet Of Things</b></small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'armansite/images/weather.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Weather Website in Django</h5>
+                    <p class="card-text">We can easily search for any specific city to find out the
+                    current temperature  using OpenAppWeather API.</p>
+                    <p class="card-text">
+                        <!--<small class="text-muted">Last updated 3 mins ago</small>-->
+                        <a href="https://github.com/MD-ARMAN-Shanto/Django_Project">GithubLink</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'armansite/images/python.png' %}" class="card-img-top" alt="...">
+                <div class="card-body"><br><br>
+                    <h5 class="card-title">Several Python Codes</h5>
+                    <p class="card-text">I am interested in also Data Structures and Algorithms that is why
+                    I started with some basics python coding</p><br>
+                    <p class="card-text">
+                        <!--<small class="text-muted">Last updated 3 mins ago</small>-->
+                        <a href=" https://github.com/MD-ARMAN-Shanto/python_basic">Python Basic</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'armansite/images/fiveg.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">5G Reasearch</h5>
+                    <p class="card-text">In my final Semester I worked on 5G Mobile networks and the possibility
+                    of deployment 5G in Our country and its cost</p>
+                    <p class="card-text">
+                        <!--<small class="text-muted">Last updated 3 mins ago</small>-->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
