@@ -1,0 +1,35 @@
+{% extends 'armansite/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container">
+        <div class="row" style="margin-top: 100px">
+            <div class="col-sm-6">
+                <form class="form-inline" action="{% url 'index' %}" method="post">
+                    {% csrf_token %}
+                    <label class="sr-only" for="inlineFormInputName2">First Name</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
+                           placeholder="First Name" name="f_name">
+
+                    <label class="sr-only" for="inlineFormInputGroupUsername2">Last Name</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
+                           placeholder="Last Name" name="l_name">
+                    <button type="submit" class="btn btn-secondary mb-2">Generate a Chuck Norris joke
+                        <img src="{% static 'armansite/images/joke.png' %}" width="30" height="30"></button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Chuck Norris</h5>
+                        <p class="card-text">
+                            {{ joker }}
+                        </p>
+                        <a href="{% url 'portfolio' %}" class="card-link">Check out My Portfolio</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
